@@ -1,10 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Socket.io</title>
+    <title>Socket.io Basics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-md-offset-4">
+                    <h1 class="text-center">Join Chat</h1>
+
+                    <form action="/chat.html">
+                        <div class="form-group">
+                            <label for="name">Display Name:</label>
+                            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                                <input type="text" id="name" name="name" class="form-control">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room">Room Name:</label>
+                            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-comment"></i>
+                            </span>
+                                <input type="text" id="room" name="room" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-block" value="Join Chat">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
