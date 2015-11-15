@@ -9,6 +9,7 @@
     var name = getQueryVariable('name') || 'Anonymous';
     var room = getQueryVariable('room') || 'Public';
     var $roomTitle = $('.room-title');
+    var chatBody = $('.chat-body');
 
     $roomTitle.text(room);
 
@@ -24,7 +25,6 @@
         var momentTimestamp = moment.utc(message.timestamp);
         var $messages = $('.messages');
         var $message = $('<li class="list-group-item"></li>');
-        var chatBody = $('.chat-body');
 
         $message.append('<p><strong>' + message.name + ' - ' + momentTimestamp.local().format('hh:mm a') + ':</strong></p>');
         $message.append('<p>' + message.text + '</p>');

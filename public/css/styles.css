@@ -15,6 +15,7 @@ ul {
 
 .messages p {
     margin: 6px 0;
+    word-break: break-all;
 }
 
 .messages li {
