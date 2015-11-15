@@ -29,7 +29,7 @@ function sendAllUsers(socket) {
 
     socket.emit('message', {
         name: 'System',
-        text: 'There are ' + users.length + ' online in this room. List of all users: ' + users.join(', '),
+        text: 'There are total of ' + users.length + ' users online in this room. List of all users: ' + users.join(', '),
         timestamp: moment().valueOf()
 
     });
