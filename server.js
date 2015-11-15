@@ -25,12 +25,11 @@ function sendAllUsers(socket) {
         if(info.room === userInfo.room) {
             users.push(userInfo.name);
         }
-
     });
 
     socket.emit('message', {
         name: 'System',
-        text: 'List of all users: ' + users.join(', '),
+        text: 'There are ' + users.length + ' online in this room. List of all users: ' + users.join(', '),
         timestamp: moment().valueOf()
 
     });
@@ -66,7 +65,7 @@ io.on('connection', function (socket) {
 
     socket.on('message', function (message) {
 
-        if(message.text === '@currentUsers') {
+        if(message.text === '@users') {
             sendAllUsers(socket);
         } else {
             message.timestamp = moment().valueOf();
