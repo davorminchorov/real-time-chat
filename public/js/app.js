@@ -24,10 +24,13 @@
         var momentTimestamp = moment.utc(message.timestamp);
         var $messages = $('.messages');
         var $message = $('<li class="list-group-item"></li>');
+        var chatBody = $('.chat-body');
 
         $message.append('<p><strong>' + message.name + ' - ' + momentTimestamp.local().format('hh:mm a') + ':</strong></p>');
         $message.append('<p>' + message.text + '</p>');
         $messages.append($message);
+
+        chatBody.animate({scrollTop: chatBody.prop("scrollHeight")}, 500);
 
     });
 
