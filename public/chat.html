@@ -3,37 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Real-Time Chat</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <div class="container">
+    <div class="container-fluid chat">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 well">
-                <a href="/index.html">Leave Room</a>
-
-                <h2 class="room-title text-center"></h2>
-
-                <ul class="messages list-group"></ul>
-
-                <form id="message_form">
-                    <div class="form-group">
-                        <label for="message" class="label-control"></label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-comment"></i>
-                            </span>
-                            <input type="text" name="message" id="message" class="form-control">
-                        </div>
+            <div class="col-md-10 col-md-offset-1">
+                <a href="/index.html" class="btn btn-default btn-block">Leave Room</a>
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="accordion">
+                        <h4 class="room-title text-center"></h4>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+                    <div class="panel-body chat-body">
+                        <ul class="messages list-group"></ul>
                     </div>
-                </form>
+                    <div class="panel-footer">
+                        <form id="message_form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="message" name="message" type="text" class="form-control" placeholder="Type your message here..." required/>
+                                    <span class="input-group-btn">
+                                        <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-6 col-md-offset-3 well">-->
+                <!--<a href="/index.html">Leave Room</a>-->
+
+                <!--<h2 class="room-title text-center"></h2>-->
+
+                <!--<ul class="messages list-group"></ul>-->
+
+                <!--<form id="message_form">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="message" class="label-control"></label>-->
+                        <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon">-->
+                                <!--<i class="glyphicon glyphicon-comment"></i>-->
+                            <!--</span>-->
+                            <!--<input type="text" name="message" id="message" class="form-control">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="submit" class="btn btn-primary btn-block" value="Send Message">-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/socket.io-1.3.7.js"></script>

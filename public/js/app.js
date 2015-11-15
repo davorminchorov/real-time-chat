@@ -12,7 +12,6 @@
 
     $roomTitle.text(room);
 
-
     socket.on('connect', function () {
         console.log('Connected to socket.io server!');
         socket.emit('join-room', {
@@ -29,6 +28,7 @@
         $message.append('<p><strong>' + message.name + ' - ' + momentTimestamp.local().format('hh:mm a') + ':</strong></p>');
         $message.append('<p>' + message.text + '</p>');
         $messages.append($message);
+
     });
 
 
@@ -56,4 +56,5 @@
 
         return undefined;
     }
+
 })();

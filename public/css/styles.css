@@ -16,3 +16,80 @@ ul {
 .messages p {
     margin: 6px 0;
 }
+
+.messages li {
+    padding: 5px 10px;
+}
+
+.messages li:nth-child(odd) {
+    background: #eee;
+}
+
+.panel-heading h4 {
+    color: #ffffff;
+}
+
+.panel-heading
+{
+    background-color: #FAFAFA;
+}
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.messages li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #FAFAFA;
+}
+
+.messages li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.messages li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.messages li .chat-body p
+{
+    margin: 0;
+    color: #FAFAFA;
+}
+
+.panel .slidedown .glyphicon, .messages .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 750px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color:#FAFAFA;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FAFAFA;
+}
+
